@@ -1,0 +1,4 @@
+cd /
+cd ni-rt
+cd system
+put Aerial-Assist/Debug/Aerial-Assist.out FRC_UserProgram.out

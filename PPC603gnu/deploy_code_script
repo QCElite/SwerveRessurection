@@ -1,4 +1,4 @@
 cd /
 cd ni-rt
 cd system
-put Aerial-Assist/Debug/Aerial-Assist.out FRC_UserProgram.out
+put SwerveRessurection/Debug/SwerveRessurection.out FRC_UserProgram.out

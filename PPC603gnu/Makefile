@@ -37,7 +37,7 @@ else
 MODE_DIR := NonDebug
 endif
 OBJ_DIR := .
-PRJ_ROOT_DIR := C:/Users/Skillin/Aerial-Assist
+PRJ_ROOT_DIR := C:/Users/Skillin/SwerveRessurection
 WS_ROOT_DIR := c:/Users/Skillin
 
 
@@ -83,104 +83,104 @@ endif
 
 
 #Project Targets
-PROJECT_TARGETS = Aerial-Assist/$(MODE_DIR)/Aerial-Assist.out \
-	 Aerial-Assist_partialImage/$(MODE_DIR)/Aerial-Assist_partialImage.o
+PROJECT_TARGETS = SwerveRessurection/$(MODE_DIR)/SwerveRessurection.out \
+	 SwerveRessurection_partialImage/$(MODE_DIR)/SwerveRessurection_partialImage.o
 
 
 #Rules
 
-# Aerial-Assist
+# SwerveRessurection
 ifeq ($(DEBUG_MODE),1)
-Aerial-Assist/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -g
-Aerial-Assist/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -g
-Aerial-Assist/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -g
-Aerial-Assist/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
-Aerial-Assist/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
-Aerial-Assist/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -g
+SwerveRessurection/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -g
+SwerveRessurection/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -g
+SwerveRessurection/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -g
+SwerveRessurection/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
+SwerveRessurection/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
+SwerveRessurection/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -g
 else
-Aerial-Assist/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -O2 -fstrength-reduce -fno-builtin
-Aerial-Assist/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -O2 -fstrength-reduce -fno-builtin
-Aerial-Assist/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -O2 -fstrength-reduce -fno-builtin
-Aerial-Assist/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
-Aerial-Assist/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
-Aerial-Assist/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -O2 -fstrength-reduce -fno-builtin
+SwerveRessurection/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -O2 -fstrength-reduce -fno-builtin
+SwerveRessurection/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -O2 -fstrength-reduce -fno-builtin
+SwerveRessurection/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -O2 -fstrength-reduce -fno-builtin
+SwerveRessurection/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
+SwerveRessurection/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
+SwerveRessurection/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -O2 -fstrength-reduce -fno-builtin
 endif
-Aerial-Assist/$(MODE_DIR)/% : IDE_INCLUDES = -I$(WIND_BASE)/target/h -I$(WIND_BASE)/target/h/WPILib -I$(WIND_BASE)/target/h/wrn/coreip -I. 
-Aerial-Assist/$(MODE_DIR)/% : IDE_LIBRARIES = $(WIND_BASE)/target/lib/WPILib.a 
-Aerial-Assist/$(MODE_DIR)/% : PROJECT_TYPE = DKM
-Aerial-Assist/$(MODE_DIR)/% : DEFINES = 
-Aerial-Assist/$(MODE_DIR)/% : EXPAND_DBG = 0
-Aerial-Assist/$(MODE_DIR)/% : VX_CPU_FAMILY = ppc
-Aerial-Assist/$(MODE_DIR)/% : CPU = PPC603
-Aerial-Assist/$(MODE_DIR)/% : TOOL_FAMILY = gnu
-Aerial-Assist/$(MODE_DIR)/% : TOOL = gnu
-Aerial-Assist/$(MODE_DIR)/% : TOOL_PATH = /c/WindRiver/gnu/3.4.4-vxworks-6.3/x86-win32/bin/
-Aerial-Assist/$(MODE_DIR)/% : CC_ARCH_SPEC = -mcpu=603 -mstrict-align -mno-implicit-fp  -mlongcall
-Aerial-Assist/$(MODE_DIR)/% : LIBPATH = 
-Aerial-Assist/$(MODE_DIR)/% : LIBS = 
-Aerial-Assist/$(MODE_DIR)/% : OBJ_DIR := Aerial-Assist/$(MODE_DIR)
+SwerveRessurection/$(MODE_DIR)/% : IDE_INCLUDES = -I$(WIND_BASE)/target/h -I$(WIND_BASE)/target/h/WPILib -I$(WIND_BASE)/target/h/wrn/coreip -I. 
+SwerveRessurection/$(MODE_DIR)/% : IDE_LIBRARIES = $(WIND_BASE)/target/lib/WPILib.a 
+SwerveRessurection/$(MODE_DIR)/% : PROJECT_TYPE = DKM
+SwerveRessurection/$(MODE_DIR)/% : DEFINES = 
+SwerveRessurection/$(MODE_DIR)/% : EXPAND_DBG = 0
+SwerveRessurection/$(MODE_DIR)/% : VX_CPU_FAMILY = ppc
+SwerveRessurection/$(MODE_DIR)/% : CPU = PPC603
+SwerveRessurection/$(MODE_DIR)/% : TOOL_FAMILY = gnu
+SwerveRessurection/$(MODE_DIR)/% : TOOL = gnu
+SwerveRessurection/$(MODE_DIR)/% : TOOL_PATH = /c/WindRiver/gnu/3.4.4-vxworks-6.3/x86-win32/bin/
+SwerveRessurection/$(MODE_DIR)/% : CC_ARCH_SPEC = -mcpu=603 -mstrict-align -mno-implicit-fp  -mlongcall
+SwerveRessurection/$(MODE_DIR)/% : LIBPATH = 
+SwerveRessurection/$(MODE_DIR)/% : LIBS = 
+SwerveRessurection/$(MODE_DIR)/% : OBJ_DIR := SwerveRessurection/$(MODE_DIR)
 
-OBJECTS_Aerial-Assist = Aerial-Assist_partialImage/$(MODE_DIR)/Aerial-Assist_partialImage.o
+OBJECTS_SwerveRessurection = SwerveRessurection_partialImage/$(MODE_DIR)/SwerveRessurection_partialImage.o
 
-Aerial-Assist/$(MODE_DIR)/Aerial-Assist.out : $(OBJECTS_Aerial-Assist)
-	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@";rm -f "$@";$(TOOL_PATH)nmppc.exe $(OBJECTS_Aerial-Assist) $(IDE_LIBRARIES) | tclsh $(WIND_BASE)/host/resource/hutils/tcl/munch.tcl -c ppc > $(OBJ_DIR)/ctdt.c; $(TOOL_PATH)ccppc $(DEBUGFLAGS_Linker) $(CC_ARCH_SPEC) -fdollars-in-identifiers -Wall $(ADDED_CFLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES)  -o $(OBJ_DIR)/ctdt.o -c $(OBJ_DIR)/ctdt.c; $(TOOL_PATH)ccppc -r -nostdlib -Wl,-X -T $(WIND_BASE)/target/h/tool/gnu/ldscripts/link.OUT -o "$@" $(OBJ_DIR)/ctdt.o $(OBJECTS_Aerial-Assist) $(IDE_LIBRARIES) $(LIBPATH) $(LIBS)  $(ADDED_LIBPATH) $(ADDED_LIBS) && if [ "$(EXPAND_DBG)" = "1" ]; then plink "$@";fi
+SwerveRessurection/$(MODE_DIR)/SwerveRessurection.out : $(OBJECTS_SwerveRessurection)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@";rm -f "$@";$(TOOL_PATH)nmppc.exe $(OBJECTS_SwerveRessurection) $(IDE_LIBRARIES) | tclsh $(WIND_BASE)/host/resource/hutils/tcl/munch.tcl -c ppc > $(OBJ_DIR)/ctdt.c; $(TOOL_PATH)ccppc $(DEBUGFLAGS_Linker) $(CC_ARCH_SPEC) -fdollars-in-identifiers -Wall $(ADDED_CFLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES)  -o $(OBJ_DIR)/ctdt.o -c $(OBJ_DIR)/ctdt.c; $(TOOL_PATH)ccppc -r -nostdlib -Wl,-X -T $(WIND_BASE)/target/h/tool/gnu/ldscripts/link.OUT -o "$@" $(OBJ_DIR)/ctdt.o $(OBJECTS_SwerveRessurection) $(IDE_LIBRARIES) $(LIBPATH) $(LIBS)  $(ADDED_LIBPATH) $(ADDED_LIBS) && if [ "$(EXPAND_DBG)" = "1" ]; then plink "$@";fi
 
-Aerial-Assist/$(MODE_DIR)/Aerial-Assist_compile_file : $(FILE) ;
+SwerveRessurection/$(MODE_DIR)/SwerveRessurection_compile_file : $(FILE) ;
 
-_clean :: Aerial-Assist/$(MODE_DIR)/Aerial-Assist_clean
+_clean :: SwerveRessurection/$(MODE_DIR)/SwerveRessurection_clean
 
-Aerial-Assist/$(MODE_DIR)/Aerial-Assist_clean : 
-	$(TRACE_FLAG)if [ -d "Aerial-Assist" ]; then cd "Aerial-Assist"; rm -rf $(MODE_DIR); fi
+SwerveRessurection/$(MODE_DIR)/SwerveRessurection_clean : 
+	$(TRACE_FLAG)if [ -d "SwerveRessurection" ]; then cd "SwerveRessurection"; rm -rf $(MODE_DIR); fi
 
 
-# Aerial-Assist_partialImage
+# SwerveRessurection_partialImage
 ifeq ($(DEBUG_MODE),1)
-Aerial-Assist_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -g
-Aerial-Assist_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -g
-Aerial-Assist_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -g
-Aerial-Assist_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
-Aerial-Assist_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
-Aerial-Assist_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -g
+SwerveRessurection_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -g
+SwerveRessurection_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -g
+SwerveRessurection_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -g
+SwerveRessurection_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
+SwerveRessurection_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
+SwerveRessurection_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -g
 else
-Aerial-Assist_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -O2 -fstrength-reduce -fno-builtin
-Aerial-Assist_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -O2 -fstrength-reduce -fno-builtin
-Aerial-Assist_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -O2 -fstrength-reduce -fno-builtin
-Aerial-Assist_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
-Aerial-Assist_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
-Aerial-Assist_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -O2 -fstrength-reduce -fno-builtin
+SwerveRessurection_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -O2 -fstrength-reduce -fno-builtin
+SwerveRessurection_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -O2 -fstrength-reduce -fno-builtin
+SwerveRessurection_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -O2 -fstrength-reduce -fno-builtin
+SwerveRessurection_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
+SwerveRessurection_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
+SwerveRessurection_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -O2 -fstrength-reduce -fno-builtin
 endif
-Aerial-Assist_partialImage/$(MODE_DIR)/% : IDE_INCLUDES = -I$(WIND_BASE)/target/h -I$(WIND_BASE)/target/h/WPILib -I$(WIND_BASE)/target/h/wrn/coreip -I. -I$(PRJ_ROOT_DIR)
-Aerial-Assist_partialImage/$(MODE_DIR)/% : IDE_LIBRARIES = $(WIND_BASE)/target/lib/WPILib.a 
-Aerial-Assist_partialImage/$(MODE_DIR)/% : PROJECT_TYPE = DKM
-Aerial-Assist_partialImage/$(MODE_DIR)/% : DEFINES = 
-Aerial-Assist_partialImage/$(MODE_DIR)/% : EXPAND_DBG = 0
-Aerial-Assist_partialImage/$(MODE_DIR)/% : VX_CPU_FAMILY = ppc
-Aerial-Assist_partialImage/$(MODE_DIR)/% : CPU = PPC603
-Aerial-Assist_partialImage/$(MODE_DIR)/% : TOOL_FAMILY = gnu
-Aerial-Assist_partialImage/$(MODE_DIR)/% : TOOL = gnu
-Aerial-Assist_partialImage/$(MODE_DIR)/% : TOOL_PATH = /c/WindRiver/gnu/3.4.4-vxworks-6.3/x86-win32/bin/
-Aerial-Assist_partialImage/$(MODE_DIR)/% : CC_ARCH_SPEC = -mcpu=603 -mstrict-align -mno-implicit-fp  -mlongcall
-Aerial-Assist_partialImage/$(MODE_DIR)/% : LIBPATH = 
-Aerial-Assist_partialImage/$(MODE_DIR)/% : LIBS = 
-Aerial-Assist_partialImage/$(MODE_DIR)/% : OBJ_DIR := Aerial-Assist_partialImage/$(MODE_DIR)
+SwerveRessurection_partialImage/$(MODE_DIR)/% : IDE_INCLUDES = -I$(WIND_BASE)/target/h -I$(WIND_BASE)/target/h/WPILib -I$(WIND_BASE)/target/h/wrn/coreip -I. -I$(PRJ_ROOT_DIR)
+SwerveRessurection_partialImage/$(MODE_DIR)/% : IDE_LIBRARIES = $(WIND_BASE)/target/lib/WPILib.a 
+SwerveRessurection_partialImage/$(MODE_DIR)/% : PROJECT_TYPE = DKM
+SwerveRessurection_partialImage/$(MODE_DIR)/% : DEFINES = 
+SwerveRessurection_partialImage/$(MODE_DIR)/% : EXPAND_DBG = 0
+SwerveRessurection_partialImage/$(MODE_DIR)/% : VX_CPU_FAMILY = ppc
+SwerveRessurection_partialImage/$(MODE_DIR)/% : CPU = PPC603
+SwerveRessurection_partialImage/$(MODE_DIR)/% : TOOL_FAMILY = gnu
+SwerveRessurection_partialImage/$(MODE_DIR)/% : TOOL = gnu
+SwerveRessurection_partialImage/$(MODE_DIR)/% : TOOL_PATH = /c/WindRiver/gnu/3.4.4-vxworks-6.3/x86-win32/bin/
+SwerveRessurection_partialImage/$(MODE_DIR)/% : CC_ARCH_SPEC = -mcpu=603 -mstrict-align -mno-implicit-fp  -mlongcall
+SwerveRessurection_partialImage/$(MODE_DIR)/% : LIBPATH = 
+SwerveRessurection_partialImage/$(MODE_DIR)/% : LIBS = 
+SwerveRessurection_partialImage/$(MODE_DIR)/% : OBJ_DIR := SwerveRessurection_partialImage/$(MODE_DIR)
 
-Aerial-Assist_partialImage/$(MODE_DIR)/Objects/Aerial-Assist/MyRobot.o : C:/Users/Skillin/Aerial-Assist/MyRobot.cpp
+SwerveRessurection_partialImage/$(MODE_DIR)/Objects/SwerveRessurection/MyRobot.o : C:/Users/Skillin/SwerveRessurection/MyRobot.cpp
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
-OBJECTS_Aerial-Assist_partialImage = Aerial-Assist_partialImage/$(MODE_DIR)/Objects/Aerial-Assist/MyRobot.o 
+OBJECTS_SwerveRessurection_partialImage = SwerveRessurection_partialImage/$(MODE_DIR)/Objects/SwerveRessurection/MyRobot.o 
 
-Aerial-Assist_partialImage/$(MODE_DIR)/Aerial-Assist_partialImage.o : $(OBJECTS_Aerial-Assist_partialImage)
-	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc -r -nostdlib -Wl,-X  -o "$@" $(OBJECTS_Aerial-Assist_partialImage) $(LIBPATH) $(LIBS) $(ADDED_LIBPATH) $(ADDED_LIBS)  && if [ "$(EXPAND_DBG)" = "1" ]; then plink "$@";fi
+SwerveRessurection_partialImage/$(MODE_DIR)/SwerveRessurection_partialImage.o : $(OBJECTS_SwerveRessurection_partialImage)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc -r -nostdlib -Wl,-X  -o "$@" $(OBJECTS_SwerveRessurection_partialImage) $(LIBPATH) $(LIBS) $(ADDED_LIBPATH) $(ADDED_LIBS)  && if [ "$(EXPAND_DBG)" = "1" ]; then plink "$@";fi
 
-Aerial-Assist_partialImage/$(MODE_DIR)/Aerial-Assist_partialImage_compile_file : $(FILE) ;
+SwerveRessurection_partialImage/$(MODE_DIR)/SwerveRessurection_partialImage_compile_file : $(FILE) ;
 
-_clean :: Aerial-Assist_partialImage/$(MODE_DIR)/Aerial-Assist_partialImage_clean
+_clean :: SwerveRessurection_partialImage/$(MODE_DIR)/SwerveRessurection_partialImage_clean
 
-Aerial-Assist_partialImage/$(MODE_DIR)/Aerial-Assist_partialImage_clean : 
-	$(TRACE_FLAG)if [ -d "Aerial-Assist_partialImage" ]; then cd "Aerial-Assist_partialImage"; rm -rf $(MODE_DIR); fi
+SwerveRessurection_partialImage/$(MODE_DIR)/SwerveRessurection_partialImage_clean : 
+	$(TRACE_FLAG)if [ -d "SwerveRessurection_partialImage" ]; then cd "SwerveRessurection_partialImage"; rm -rf $(MODE_DIR); fi
 
-DEP_FILES := Aerial-Assist_partialImage/$(MODE_DIR)/Objects/Aerial-Assist/MyRobot.d 
+DEP_FILES := SwerveRessurection_partialImage/$(MODE_DIR)/Objects/SwerveRessurection/MyRobot.d 
 -include $(DEP_FILES)
 
 
